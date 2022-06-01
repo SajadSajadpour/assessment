@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="4dp"
+            >
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/black"
+                android:text="@string/dialog_title"
+                />
+
+            <!-- *************************************************************************** -->
+            <!-- Begin Date                                                                  -->
+            <!-- *************************************************************************** -->
+            <LinearLayout
+                style="@style/FilterDialogSubtitleLayout">
+                <CheckBox
+                    android:id="@+id/cbBeginDate"
+                    style="@style/FilterDialogCheckBox"
+                    />
+                <TextView
+                    android:id="@+id/tvBeginDate"
+                    style="@style/FilterDialogSubtitle"
+                    android:text="@string/dialog_sub_begin_date"
+                    />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/etBeginDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_event_black_24dp"
+                />
+
+
+            <!-- *************************************************************************** -->
+            <!-- End Date                                                                    -->
+            <!-- *************************************************************************** -->
+            <LinearLayout
+                style="@style/FilterDialogSubtitleLayout">
+                <CheckBox
+                    android:id="@+id/cbEndDate"
+                    style="@style/FilterDialogCheckBox"
+                    />
+                <TextView
+                    android:id="@+id/tvEndDate"
+                    style="@style/FilterDialogSubtitle"
+                    android:text="@string/dialog_sub_end_date"
+                    />
+            </LinearLayout>
+            <EditText
+                android:id="@+id/etEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableRight="@drawable/ic_event_black_24dp"
+                />
+
+            <!-- *************************************************************************** -->
+            <!-- Sort order                                                                  -->
+            <!-- *************************************************************************** -->
+            <LinearLayout
+                style="@style/FilterDialogSubtitleLayout">
+                <CheckBox
+                    android:id="@+id/cbSortOrder"
+                    style="@style/FilterDialogCheckBox"
+                    />
+                <TextView
+                    android:id="@+id/tvSortOrder"
+                    style="@style/FilterDialogSubtitle"
+                    android:text="Sort chronologically"
+                    />
+            </LinearLayout>
+            <RadioGroup
+                android:id="@+id/rgSortOrder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton android:id="@+id/rbSortOrderNewest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Newest first"
+                    android:layout_marginRight="12dp"
+                    />
+                <RadioButton android:id="@+id/rbSortOrderOldest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Oldest first"
+                    />
+            </RadioGroup>
+
+
+            <!-- *************************************************************************** -->
+            <!-- News desk categories                                                        -->
+            <!-- *************************************************************************** -->
+            <LinearLayout
+                style="@style/FilterDialogSubtitleLayout">
+                <CheckBox
+                    android:id="@+id/cbNewsDesk"
+                    style="@style/FilterDialogCheckBox"
+                    />
+                <TextView
+                    android:id="@+id/tvNewsDesk"
+                    style="@style/FilterDialogSubtitle"
+                    android:text="Category"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/newsDeskContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="32dp"
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</layout>
